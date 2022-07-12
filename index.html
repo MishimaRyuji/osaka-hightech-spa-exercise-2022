@@ -5,17 +5,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vue.js の基礎</title>
+  <title>株式会社ゆめみのコーディングテスト</title>
 
   <!-- Vue.js の読み込み -->
   <script src="https://unpkg.com/vue@next"></script>
+
+  <!-- 独自 CSS の読み込み -->
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-  <!-- TODO: 公式リファレンスに沿って HTML を記述 -->
+  <div id="app">
+    <h2>APIキーを入力</h2>
+    <input type="text" v-model="api">
+    
+    <h2>都道府県</h2>
+    <prefecture-checkbox></prefecture-checkbox>
+
+    <h2>人口グラフ</h2>
+    <population-bar-plot
+      v-bind:api="api"
+    ></population-bar-plot>
+  </div>
 </body>
 
 <!-- 独自 JavaScript の読み込み -->
+<script src="api.js"></script>
 <script src="index.js"></script>
 
 </html>

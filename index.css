@@ -1,0 +1,9 @@
+.container{
+  display: flex;
+  align-items: flex-end;
+}
+
+.item{
+    background-color: rgb(241, 86, 158);
+    width: 20px;
+}
